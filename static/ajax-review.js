@@ -18,7 +18,7 @@ $('#get-fortune-button').on('click', showFortune);
 
 function showWeather(evt) {
     evt.preventDefault();
-    var url = "/weather?zipcode=" + $("#zipcode-field").val();
+    var url = "/weather?zipcode=" + $("#zipcode-field").val(); 
     // TODO: request weather with that URL and show the forecast in #weather-info
     $.get(url, function(data) {
 
@@ -26,7 +26,7 @@ function showWeather(evt) {
     	console.log(data)
     	console.log(url)
 
-    	$('#weather-info').html(data.forecast + "<br>" + data.temp);
+    	$('#weather-info').html(data.forecast + "<br>" + data.temp); //dot notation for attirbute of object
     })
 
     
